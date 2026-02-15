@@ -569,35 +569,6 @@ document.getElementById('btn-close-sudoku').addEventListener('click', () => {
 
 document.getElementById('sudoku-level').addEventListener('change', generarNuevoSudoku);
 
-// Formulario 
-const formulario = document.getElementById('contacto-biblioteca');
-const btnNuevoRegistro = document.getElementById('nuevo-registro');
-
-if (formulario) {
-    formulario.addEventListener('submit', async function (event) {
-        event.preventDefault(); // Evita que la página se recargue
-
-        const formData = new FormData(this);
-
-        // Enviar los datos a Formspree
-        const response = await fetch(this.action, {
-            method: this.method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        if (response.ok) {
-            alert('¡Registro enviado con éxito!');
-            formulario.reset(); // Limpia los campos
-        } else {
-            alert('Hubo un error al enviar. Por favor, inténtelo de nuevo.');
-        }
-    });
-}
-
-
 /* mostrar libros proyectos */
 
 document.getElementById('enlace-mostrar-libro2').addEventListener('click', function (e) {
@@ -714,6 +685,81 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault();
 
             // Mostramos el mensaje de alerta
+            alert('Servicios no disponibles actualmente');
+        });
+    });
+});
+
+//formulario
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Lógica del Modal de Bienvenida
+    const modal = document.getElementById('modal-bienvenida');
+    const btnEntrar = document.getElementById('btn-entrar-sitio');
+
+    if (btnEntrar && modal) {
+        btnEntrar.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
+
+    // 2. Lógica del Formulario de Contacto
+    const formulario = document.getElementById('contacto-biblioteca');
+    const btnNuevoRegistro = document.getElementById('nuevo-registro'); // Corregido el nombre
+
+    if (formulario) {
+        const btnEnviar = formulario.querySelector('.btn-sellar');
+
+        formulario.addEventListener('submit', async function (event) {
+            event.preventDefault(); // Evita recarga de página
+
+            const formData = new FormData(this);
+
+            try {
+                const response = await fetch(this.action, {
+                    method: this.method,
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    alert('¡Registro enviado con éxito!');
+
+                    // Cambios dinámicos en la interfaz
+                    if (btnEnviar) btnEnviar.style.display = 'none';
+                    if (btnNuevoRegistro) btnNuevoRegistro.style.display = 'block';
+
+                    // Deshabilitar campos para evitar envíos duplicados
+                    Array.from(formulario.elements).forEach(el => el.disabled = true);
+                    if (btnNuevoRegistro) btnNuevoRegistro.disabled = false;
+                } else {
+                    alert('Error en el servidor de envío.');
+                }
+            } catch (error) {
+                alert('Error al enviar. Nota: Formspree requiere que el sitio esté publicado (online) para funcionar correctamente.');
+            }
+        });
+    }
+
+    // 3. Lógica para el botón "Limpiar para enviar otro"
+    if (btnNuevoRegistro) {
+        btnNuevoRegistro.addEventListener('click', () => {
+            formulario.reset();
+            // Habilitar campos de nuevo
+            Array.from(formulario.elements).forEach(el => el.disabled = false);
+
+            // Restaurar botones
+            const btnEnviar = formulario.querySelector('.btn-sellar');
+            if (btnEnviar) btnEnviar.style.display = 'block';
+            btnNuevoRegistro.style.display = 'none';
+        });
+    }
+
+    // 4. Lógica para alertas de servicios no disponibles
+    const enlacesInactivos = document.querySelectorAll('.enlace-inactivo');
+    enlacesInactivos.forEach(enlace => {
+        enlace.addEventListener('click', (e) => {
+            e.preventDefault();
             alert('Servicios no disponibles actualmente');
         });
     });

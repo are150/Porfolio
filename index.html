@@ -201,9 +201,9 @@
           646923027
         </p>
         <p>
-          <a href="www.linkedin.com/in/Jaime-Garcia-de-Murcia" class="enlace destacado" style="color:#9A603C;">Web
+          <a href="www.linkedin.com/in/jaime-garcia-de-murcia" class="enlace destacado" style="color:#9A603C;">Web
             Curriculum</a>
-          <br>www.linkedin.com/in/Jaime-Garcia-de-Murcia/</br>
+          <br>www.linkedin.com/in/jaime-garcia-de-murcia</br>
 
         </p>
       </div>
@@ -223,11 +223,9 @@
       <p>Tiempo de respuesta 24h max por correo.</p>
       <p> Llamadas bloqueadas por defecto.</p>
     </div>
-
     <iframe name="vacio" style="display:none;"></iframe>
-    <!-- Para que se realice el POST, el java y no vaya a otra web -->
+    <form id="contacto-biblioteca" action="https://formspree.io/f/maqdewjz" method="POST">
 
-    <form id="" action="https://formspree.io/f/maqdewjz" method="POST" target="vacio">
       <div class="campo-ficha">
         <label for="campotexto">NOMBRE:</label>
         <input type="text" name="nombre" placeholder="Escriba su nombre..." id="campotexto" required>
@@ -235,7 +233,7 @@
 
       <div class="campo-ficha">
         <label for="campo-email">E-MAIL:</label>
-        <input type="email" name="email" placeholder="correo@ejemplo.com" required id="campo-email">
+        <input type="email" name="email" placeholder="correo@ejemplo.com" id="campo-email" required>
       </div>
 
       <div class="campo-ficha">
@@ -244,9 +242,15 @@
       </div>
 
       <div class="contenedor-acciones">
-        <button type="submit" class="btn-sellar">ENVIAR REGISTRO</button>
-        <button type="button" id="nuevo-registro" class="btn-otro">Limpiar para enviar otro</button>
+        <button type="submit" class="btn-sellar">
+          ENVIAR REGISTRO
+        </button>
+
+        <button type="button" id="nuevo-registro" class="btn-otro" style="display:none;">
+          Limpiar para enviar otro
+        </button>
       </div>
+
     </form>
     <div class="ficha-decoracion-inferior"></div>
   </div>
@@ -296,9 +300,10 @@
         <a href="#" class="hotspot" id="spot-porfolio" data-texto="Porfolio">Porfolio</a>
         <a href="34235252" class="hotspot" id="spot-proy1" data-texto="Proyecto 1">Proyecto1</a>
         <a href="2414325" class="hotspot" id="spot-proy2" data-texto="Proyecto 2">Proyecto2</a>
-        <a href="21241" class="hotspot" id="spot-miscelanea" data-texto="Miscelánea">Miscelánea</a>
-        <a href="1234124" class="hotspot" id="spot-videos" data-texto="Vídeos">Vídeos</a>
-        <a href="1242" class="hotspot" id="spot-musica" data-texto="Música">Música</a>
+        <a href="javascript:void(0)" class="hotspot enlace-inactivo" id="spot-miscelanea"
+          data-texto="Miscelánea">Miscelánea</a>
+        <a href="javascript:void(0)" class="hotspot enlace-inactivo" id="spot-videos" data-texto="Vídeos">Vídeos</a>
+        <a href="javascript:void(0)" class="hotspot enlace-inactivo" id="spot-musica" data-texto="Música">Música</a>
         <div class="hotspot" id="spot-sudoku" data-texto="Sudoku">Sudoku</div>
 
         <div id="tooltip-svg"></div>
@@ -339,14 +344,14 @@
           <td>Proyecto 1</td>
           <td><a href="" id="enlace-mostrar-libro2">Mostrar Proyecto 1</a></td>
           <td>Tamaño 1</td>
-          <td><a href="">Descarga1</a></td>
+          <td><a href="javascript:void(0)" class="enlace-inactivo">Descarga1</a></td>
           <td>Data 1</td>
         </tr>
         <tr>
           <td>Proyecto 2</td>
           <td><a href="" id="enlace-mostrar-libro3">Mostrar Proyecto 2</a></td>
           <td>Tamaño 2</td>
-          <td><a href="">Descarga2</a></td>
+          <td><a href="javascript:void(0)" class="enlace-inactivo">Descarga2</a></td>
           <td>Data 2</td>
         </tr>
       </table>
@@ -573,7 +578,7 @@
         </p>
         <p>
           Aqui podrá observar mi dominio sobre, HTML, CSS y JavaScript. Los proyectos actuales son "Lorem
-          Ipsum"(Estructuraddos de contenido vacio).
+          Ipsum"(Estructurados de contenido vacio).
           La web esta pensada para ir añadiendo proyectos personales y sus explicaciones, actualemnte en proceso.
           Esta versión no es apta para formato movil.
         </p>
