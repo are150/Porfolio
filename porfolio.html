@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porfolio</title>
+  <link rel="stylesheet" href="porfolio.css" />
+</head>
+
+<body>
+  <nav class="marcapaginas">
+    <a href="#Presentacion" class="marcador" data-index="1" id="marcadorpresentacion">Índice</a>
+    <a href="#proyectos" class="marcador" data-index="2" id="marcadorproyectos">Proyectos</a>
+    <a href="#proyecto1" class="marcador" data-index="2" id="marcadorproyecto1">Proyecto1</a>
+    <a href="#proyecto2" class="marcador" data-index="3" id="marcadorproyecto2">Proyecto2</a>
+    <a href="#contraportada" class="marcador" data-index="4" id="marcadorcontraportada">Contraportada</a>
+    <a href="" class="marcador2" id="navbiblio">Biblioteca</a>
+    <a href="#portadapagina" class="marcador" id="portada" data-index="0">Portada</a>
+  </nav>
+  <div class="libro">
+    <div id="espiral-contenedor" class="gusanillo-container"></div>
+
+    <div class="portada" id="portadapagina">
+      <div class="contenido-portada">
+        <div class="portada-header">
+          <span class="etiqueta-superior">Documento de Identidad Profesional</span>
+        </div>
+
+        <div class="portada-body">
+          <div class="bloque-titulo">
+            <h1>CUADERNO <br><span>PORFOLIO DE</span></h1>
+            <h2 class="nombre-autor"><small>JAIME GARCÍA DE MURCIA</small></h2>
+            <div class="linea-decorativa"></div>
+          </div>
+        </div>
+
+        <div class="portada-footer">
+          <div>EDICIÓN DIGITAL</div>
+        </div>
+      </div>
+    </div>
+    <div class="folio">
+      <div class="Presentacion" id="Presentacion">
+        <div class="indice-cuaderno">
+          <h2>Índice de Expediciones</h2>
+          <p class="intro-indice">A continuación se detallan los proyectos y sistemas desarrollados durante mi
+            trayectoria técnica:</p>
+
+          <ul class="lista-proyectos">
+            <li>
+              <span class="numero">01</span>
+              <div class="info-proy">
+                <a href="" onclick="irAPagina(event,2)" class="enlace-proy">Infraestructura de Redes</a>
+                <p>Diseño y administración de topologías seguras, gestión de servidores y optimización de tráfico en
+                  entornos corporativos.</p>
+              </div>
+            </li>
+            <li>
+              <span class="numero">02</span>
+              <div class="info-proy">
+                <a href="" onclick="irAPagina(event,3)" class="enlace-proy">Visualización y Renderizado</a>
+                <p>Creación de entornos digitales de alto realismo y procesamiento de imágenes complejas mediante
+                  motores de render.</p>
+              </div>
+            </li>
+            <li>
+              <span class="numero">03</span>
+              <div class="info-proy">
+                <span class="enlace-proy">Automatización de Sistemas</span>
+                <p>Scripting y despliegue de soluciones para la gestión remota de equipos, maximizando la eficiencia
+                  operativa.</p>
+              </div>
+            </li>
+            <li>
+              <span class="numero">04</span>
+              <div class="info-proy">
+                <span class="enlace-proy">Laboratorio Photoshop</span>
+                <p>Edición avanzada de activos digitales, post-producción técnica y diseño de interfaces visuales.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="proyectos" id="proyectos">
+        <div class="proyecto1" id="proyecto1">
+          <div class="proyecto-detalle">
+            <div class="cabecera-proyecto">
+              <span class="ref-tecnica">REF: NET-2024-INFRA</span>
+              <h3>Infraestructura de Redes Corporativas</h3>
+            </div>
+
+            <div class="cuerpo-proyecto">
+              <p class="descripcion-manuscrita">
+                Implementación y despliegue de una arquitectura de red robusta orientada a la seguridad y la alta
+                disponibilidad.
+                El enfoque principal consistió en la segmentación de tráfico y la fortificación de nodos críticos.
+              </p>
+
+              <div class="especificaciones">
+                <h4>Especificaciones Técnicas:</h4>
+                <ul>
+                  <li><strong>Topologías:</strong> Diseño de arquitecturas seguras (estrella extendida y malla parcial).
+                  </li>
+                  <li><strong>Servidores:</strong> Configuración y gestión de entornos Windows/Linux para servicios
+                    críticos.</li>
+                  <li><strong>Tráfico:</strong> Optimización de latencia y balanceo de carga en entornos de alta
+                    demanda.</li>
+                  <li><strong>Seguridad:</strong> Implementación de firewalls y protocolos de cifrado punto a punto.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="nota-adicional">
+              <p><em>"Objetivo: Lograr una infraestructura escalable con un 99.9% de uptime operativo."</em></p>
+            </div>
+          </div>
+        </div>
+        <div class="proyecto2" id="proyecto2">
+          <div class="proyecto-detalle">
+            <div class="cabecera-proyecto">
+              <span class="ref-tecnica">REF: VIZ-2024-RENDER</span>
+              <h3>Visualización y Renderizado de Alto Realismo</h3>
+            </div>
+
+            <div class="cuerpo-proyecto">
+              <p class="descripcion-manuscrita">
+                Desarrollo de escenarios digitales mediante técnicas avanzadas de iluminación global y materiales
+                físicamente correctos (PBR).
+                Especializado en el procesamiento de escenas complejas para obtener resultados fotorrealistas.
+              </p>
+
+              <div class="especificaciones">
+                <h4>Habilidades de Procesamiento:</h4>
+                <ul>
+                  <li><strong>Entornos Digitales:</strong> Modelado y composición de escenas con atención al detalle
+                    arquitectónico y atmosférico.</li>
+                  <li><strong>Motores de Render:</strong> Gestión de ciclos de renderizado, optimización de muestras
+                    (sampling) y eliminación de ruido (denoising).</li>
+                  <li><strong>Post-producción:</strong> Tratamiento de pases de render (Z-depth, AO, Reflexión) para
+                    composición final.</li>
+                  <li><strong>Fotorrealismo:</strong> Aplicación de texturizado avanzado y sombreado basado en la física
+                    real.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="nota-adicional">
+              <p><em>"La clave del realismo no está en la luz, sino en cómo se gestionan las sombras y las
+                  imperfecciones del material."</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contraportada" id="contraportada">
+      <div class="perfil-autor">
+        <div class="foto-autor">
+          <img src="fotoperfil.png" alt="Jaime García de Murcia">
+        </div>
+
+        <div class="bio-autor">
+          <h2>Jaime García de Murcia</h2>
+          <p class="ubicacion">Cartagena, España</p>
+
+          <p class="descripcion-laboral">
+            <strong>Administrador de Sistemas Informáticos y Redes</strong> con certificaciones B2 en Inglés y Francés.
+            Especialista en infraestructura, Photoshop y renderizado, con amplia experiencia en entornos de trabajo
+            remoto.
+          </p>
+
+          <div class="detalles-personales">
+            <p>Además de la tecnología, soy un apasionado del cine, los videojuegos, la escalada y el ajedrez.
+              <em>Nota importante:</em> preparo unas torrijas de muerte.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="selectorizquierdo" id="btn-prev">&lt;</div>
+  <div class="selectorderecho" id="btn-next">&gt;</div>
+  <label for="pagina" id="identificadorpágina">Página</label>
+  <input type="number" id="pagina" placeholder="0" min="0" max="4" />
+
+  <div class="tarjeta-presentacion">
+
+    <div class="info-principal">
+      <h1 class="nombre destacado">Jaime García de Murcia</h1>
+      <p class="titulo">Administrador de sistemas informáticos y Redes
+      </p>
+      <div class="datos-contacto">
+        <p>
+          <span class="etiqueta destacado">Correo:</span>
+          jaimect97@gmail.com
+        </p>
+        <p>
+          <span class="etiqueta destacado">Teléfono:</span>
+          646923027
+        </p>
+        <p>
+          <a href="www.linkedin.com/in/jaime-garcia-de-murcia" class="enlace destacado" style="color:#9A603C;">Web
+            Curriculum</a>
+          <br>www.linkedin.com/in/jaime-garcia-de-murcia</br>
+
+        </p>
+      </div>
+    </div>
+
+    <div class="info-adicional">
+      <span class="logo">JGdM</span>
+      <img src="CV.png" alt="Código QR de Contacto" class="qr">
+    </div>
+  </div>
+
+  <div class="ficha-prestamo">
+    <div class="ficha-decoracion-superior"></div>
+
+    <div class="ficha-header">
+      <h2>Póngase en contacto</h2>
+      <p>Tiempo de respuesta 24h max por correo.</p>
+      <p> Llamadas bloqueadas por defecto.</p>
+    </div>
+    <iframe name="vacio" style="display:none;"></iframe>
+    <form id="contacto-biblioteca" action="https://formspree.io/f/maqdewjz" method="POST">
+
+      <div class="campo-ficha">
+        <label for="campotexto">NOMBRE:</label>
+        <input type="text" name="nombre" placeholder="Escriba su nombre..." id="campotexto" required>
+      </div>
+
+      <div class="campo-ficha">
+        <label for="campo-email">E-MAIL:</label>
+        <input type="email" name="email" placeholder="correo@ejemplo.com" id="campo-email" required>
+      </div>
+
+      <div class="campo-ficha">
+        <label for="comentarios">COMENTARIOS / MOTIVO:</label>
+        <textarea name="mensaje" rows="3" placeholder="¿En qué puedo ayudarte?" id="comentarios"></textarea>
+      </div>
+
+      <div class="contenedor-acciones">
+        <button type="submit" class="btn-sellar">
+          ENVIAR REGISTRO
+        </button>
+
+        <button type="button" id="nuevo-registro" class="btn-otro" style="display:none;">
+          Limpiar para enviar otro
+        </button>
+      </div>
+
+    </form>
+    <div class="ficha-decoracion-inferior"></div>
+  </div>
+
+
+  <div class="proyectos-modal">
+    <div class="bibliotecainteractiva">
+      <div class="contenedor-estanteria">
+        <button class="cerrar-modal-estanteria">X</button>
+        <svg class="imagen-base" viewBox="0 0 550 400" xmlns="http://www.w3.org/2000/svg">
+          <rect width="550" height="400" fill="#F5F1E6" />
+          <rect x="0" y="350" width="550" height="50" fill="#A9745B" />
+
+          <rect x="50" y="150" width="52" height="200" fill="rgba(140, 90, 60, 0.9)" />
+          <text x="76" y="250" font-family="Times New Roman" font-size="12" fill="white"
+            transform="rotate(-90, 76, 250)" text-anchor="middle"></text>
+
+          <rect x="115" y="170" width="45" height="180" fill="#B26E45" />
+          <text x="137" y="260" font-family="Times New Roman" font-size="10" fill="white"
+            transform="rotate(-90, 137, 260)" text-anchor="middle"></text>
+
+          <rect x="175" y="160" width="45" height="190" fill="#8C5A3C" />
+          <text x="197" y="255" font-family="Times New Roman" font-size="10" fill="white"
+            transform="rotate(-90, 197, 255)" text-anchor="middle"></text>
+
+          <g id="cd-miscelanea">
+            <rect x="330" y="305" width="130" height="15" fill="#DDD" stroke="#999" />
+            <rect x="335" y="308" width="120" height="9" fill="#FFF" />
+          </g>
+
+          <g id="cd-videos">
+            <rect x="330" y="320" width="130" height="15" fill="#DDD" stroke="#999" />
+            <rect x="335" y="323" width="120" height="9" fill="#FFF" />
+          </g>
+
+          <g id="cd-musica">
+            <rect x="330" y="335" width="130" height="15" fill="#DDD" stroke="#999" />
+            <rect x="335" y="338" width="120" height="9" fill="#FFF" />
+          </g>
+
+          <g id="item-sudoku">
+            <rect x="470" y="240" width="60" height="110" fill="none" stroke="#A9745B" stroke-width="2" />
+            <rect x="475" y="245" width="50" height="100" fill="#FFF" opacity="0.5" />
+          </g>
+        </svg>
+
+        <a href="#" class="hotspot" id="spot-porfolio" data-texto="Porfolio">Porfolio</a>
+        <a href="34235252" class="hotspot" id="spot-proy1" data-texto="Proyecto 1">Proyecto1</a>
+        <a href="2414325" class="hotspot" id="spot-proy2" data-texto="Proyecto 2">Proyecto2</a>
+        <a href="javascript:void(0)" class="hotspot enlace-inactivo" id="spot-miscelanea"
+          data-texto="Miscelánea">Miscelánea</a>
+        <a href="javascript:void(0)" class="hotspot enlace-inactivo" id="spot-videos" data-texto="Vídeos">Vídeos</a>
+        <a href="javascript:void(0)" class="hotspot enlace-inactivo" id="spot-musica" data-texto="Música">Música</a>
+        <div class="hotspot" id="spot-sudoku" data-texto="Sudoku">Sudoku</div>
+
+        <div id="tooltip-svg"></div>
+      </div>
+    </div>
+
+    <div id="sudoku-app" style="display: none;">
+      <div class="sudoku-header">
+        <div class="sudoku-config">
+          <label>Nivel:</label>
+          <select id="sudoku-level">
+            <option value="20">Fácil</option>
+            <option value="45">Medio</option>
+            <option value="65">Difícil</option>
+          </select>
+        </div>
+        <div class="sudoku-controles">
+          <button id="btn-check-sudoku">Corregir</button>
+          <button id="btn-new-sudoku">Nuevo</button>
+          <button id="btn-close-sudoku" class="btn-rojo">Cerrar</button>
+        </div>
+      </div>
+      <div id="sudoku-grid" class="sudoku-grid"></div>
+      <div id="sudoku-feedback"></div>
+    </div>
+
+    <div class="bibliotecaabierta">
+      <table>
+        <caption class="destacado">Mis proyectos</caption>
+        <tr>
+          <th>Nombre</th>
+          <th>Visualizar</th>
+          <th>Tamaño</th>
+          <th>Descarga</th>
+          <th>Fecha</th>
+        </tr>
+        <tr>
+          <td>Proyecto 1</td>
+          <td><a href="" id="enlace-mostrar-libro2">Mostrar Proyecto 1</a></td>
+          <td>Tamaño 1</td>
+          <td><a href="javascript:void(0)" class="enlace-inactivo">Descarga1</a></td>
+          <td>Data 1</td>
+        </tr>
+        <tr>
+          <td>Proyecto 2</td>
+          <td><a href="" id="enlace-mostrar-libro3">Mostrar Proyecto 2</a></td>
+          <td>Tamaño 2</td>
+          <td><a href="javascript:void(0)" class="enlace-inactivo">Descarga2</a></td>
+          <td>Data 2</td>
+        </tr>
+      </table>
+      <button class="cerrar-modal">X</button>
+
+    </div>
+  </div>
+  <div class="libro" id="libro2">
+
+    <div id="espiral-contenedor2" class="gusanillo-container"></div>
+
+    <div class="navegacion-marcapaginas">
+      <a href="" onclick="cambiarPaginaLibro2(event,0)" class="marcador m-portada-l2" title="Portada">Portada</a>
+      <a href="" onclick="cambiarPaginaLibro2(event,1)" class="marcador m-indice-l2" title="Índice">Índice</a>
+      <a href="" onclick="cambiarPaginaLibro2(event,2)" class="marcador m-detalle-l2"
+        title="Infraestructura">Contenido</a>
+    </div>
+
+    <div class="portada" id="portadapagina2">
+      <div class="contenido-portada">
+        <div class="portada-header">
+          <span class="etiqueta-superior">Expediente de Proyecto 01</span>
+        </div>
+
+        <div class="portada-body">
+          <div class="bloque-titulo">
+            <h1>SISTEMAS E <br><span>INFRAESTRUCTURA DE</span></h1>
+            <h2 class="nombre-autor">
+              <small>REDES CORPORATIVAS SEGURAS</small>
+            </h2>
+            <div class="linea-decorativa"></div>
+          </div>
+        </div>
+
+        <div class="portada-footer">
+          <div class="editorial-box">
+            <p class="editorial-texto">EDITORIAL DIGITAL</p>
+            <div class="codigo-barras">|| ||| | || ||| | ||</div>
+          </div>
+          <div class="sello-portada">JAIME GARCÍA</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="folio" id="folio2-indice" style="display:none;">
+      <div class="indice-cuaderno">
+        <h2>Planificación de Sistemas</h2>
+        <p class="intro-indice">Arquitectura y administración de servicios:</p>
+
+        <ul class="lista-proyectos">
+          <li>
+            <span class="numero">I</span>
+            <div class="info-proy">
+              <a href="javascript:void(0)" onclick="cambiarPaginaLibro2(event,2)" class="enlace-proy">Topología de
+                Red</a>
+              <p>Diseño de redes segmentadas mediante VLANs y enrutamiento inter-vlan.</p>
+            </div>
+          </li>
+          <li>
+            <span class="numero">II</span>
+            <div class="info-proy">
+              <strong>Gestión de Servidores</strong>
+              <p>Administración de Windows Server, Active Directory y servicios Linux (Debian/Ubuntu).</p>
+            </div>
+          </li>
+          <li>
+            <span class="numero">III</span>
+            <div class="info-proy">
+              <strong>Seguridad Perimetral</strong>
+              <p>Implementación de firewalls, VPNs de acceso remoto y políticas de filtrado.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="folio" id="folio2-detalle" style="display:none;">
+      <div class="proyecto-detalle">
+        <div class="cabecera-proyecto">
+          <span class="ref-tecnica">ESTADO: PRODUCCIÓN</span>
+          <h3>Implementación de Red Corporativa</h3>
+        </div>
+
+        <div class="cuerpo-proyecto">
+          <p class="descripcion-manuscrita">
+            Despliegue de una infraestructura escalable para una sede central con más de 50 puestos. Se priorizó la
+            redundancia y la seguridad de los datos internos.
+          </p>
+
+          <div class="frame-imagen-proyecto design-net">
+            <div class="placeholder-img">
+              [Esquema Lógico: VLANs, Core Switch y Salida Firewall]
+            </div>
+          </div>
+
+          <div class="especificaciones">
+            <h4>Logros Técnicos:</h4>
+            <ul>
+              <li><strong>Alta Disponibilidad:</strong> Configuración de clústeres para servicios críticos de
+                almacenamiento.</li>
+              <li><strong>Monitorización:</strong> Implementación de alertas de tráfico en tiempo real para detección de
+                intrusos.</li>
+              <li><strong>Optimización:</strong> Balanceo de carga para servicios web y bases de datos.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nota-adicional">
+          <p><strong>Certificación:</strong> Verificado bajo estándares de seguridad corporativa actualizados.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="libro" id="libro3">
+    <div id="espiral-contenedor3" class="gusanillo-container"></div>
+    <div class="navegacion-marcapaginas">
+      <a href="" onclick="cambiarPaginaLibro3(event, 0)" class="marcador m-portada" title="Portada"></a>
+      <a href="" onclick="cambiarPaginaLibro3(event, 1)" class="marcador m-indice" title="Índice"></a>
+      <a href="" onclick="cambiarPaginaLibro3(event, 2)" class="marcador m-detalle" title="Proyecto Destacado"></a>
+    </div>
+
+    <div class="portada" id="portadapagina3">
+      <div class="contenido-portada">
+        <div class="portada-header">
+          <span class="etiqueta-superior">Expediente de Proyecto 02</span>
+        </div>
+
+        <div class="portada-body">
+          <div class="bloque-titulo">
+            <h1>DISEÑO Y <br><span>VISUALIZACIÓN DE</span></h1>
+            <h2 class="nombre-autor">
+              <small>ENTORNOS Y RENDERIZADO 3D</small>
+            </h2>
+            <div class="linea-decorativa"></div>
+          </div>
+        </div>
+
+        <div class="portada-footer">
+          <div class="editorial-box">
+            <p class="editorial-texto">EDITORIAL DIGITAL</p>
+            <div class="codigo-barras">|| ||| | || ||| | ||</div>
+          </div>
+          <div class="sello-portada">JAIME GARCÍA DE MURCIA</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="folio" id="folio3-indice">
+      <div class="indice-cuaderno">
+        <h2>Registro de Arte Digital</h2>
+        <p class="intro-indice">Proyectos de visualización y post-producción:</p>
+
+        <ul class="lista-proyectos">
+          <li>
+            <span class="numero">I</span>
+            <div class="info-proy">
+              <a href="" onclick="cambiarPaginaLibro3(event, 2)" class="enlace-proy">Showroom Virtual 3D</a>
+              <p>Visualización fotorrealista de mobiliario con iluminación global y texturizado PBR.</p>
+            </div>
+          </li>
+          <li>
+            <span class="numero">II</span>
+            <div class="info-proy">
+              <strong>Modelado de Producto</strong>
+              <p>Creación de assets digitales de alta fidelidad para catálogos interactivos.</p>
+            </div>
+          </li>
+          <li>
+            <span class="numero">III</span>
+            <div class="info-proy">
+              <strong>Composición Digital</strong>
+              <p>Integración de renders en entornos reales mediante técnicas de post-producción.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="folio" id="folio3-detalle" style="display:none;">
+      <div class="proyecto-detalle">
+        <div class="cabecera-proyecto">
+          <span class="ref-tecnica">CASO DE ESTUDIO: ARCH-VIZ 04</span>
+          <h3>Showroom Virtual: Mobiliario</h3>
+        </div>
+
+        <div class="cuerpo-proyecto">
+          <p class="descripcion-manuscrita">
+            Desarrollo de un entorno inmersivo para la visualización de mobiliario de lujo. El reto principal fue
+            equilibrar la carga de polígonos con un fotorrealismo extremo para web.
+          </p>
+
+          <div class="frame-imagen-proyecto">
+            <div class="placeholder-img">
+              [Vista de Salón Contemporáneo - Renderizado con Iluminación Natural]
+            </div>
+          </div>
+
+          <div class="especificaciones">
+            <h4>Fases de Desarrollo:</h4>
+            <ul>
+              <li><strong>Iluminación:</strong> Sistema Skylight con HDRI de 32 bits para reflejos naturales.</li>
+              <li><strong>Optimización:</strong> Mapas de texturas PBR procesados en Photoshop para flujo web.</li>
+              <li><strong>Focal:</strong> Ajuste de profundidad de campo para resaltar detalles de materiales.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nota-adicional">
+          <p><strong>Resultado:</strong> Incremento en el tiempo de interacción del cliente con el catálogo digital.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="modal-bienvenida" class="modal-overlay-bienvenida">
+    <div class="carta-bienvenida">
+      <div class="sello-lacre">JGdM</div>
+      <div class="texto-carta">
+        <h2>Bienvenido al Archivo</h2>
+        <p class="saludo-inicial">Estimado visitante,</p>
+        <p>
+          Se encuentra ante mi <strong>Cuaderno de Bitácora Digital</strong>.
+          Esta web ha sido diseñada para explorarse como un libro físico.
+        </p>
+        <p>
+          Aqui podrá observar mi dominio sobre, HTML, CSS y JavaScript. Los proyectos actuales son "Lorem
+          Ipsum"(Estructurados de contenido vacio).
+          La web esta pensada para ir añadiendo proyectos personales y sus explicaciones, actualemnte en proceso.
+          Esta versión no es apta para formato movil.
+        </p>
+
+        <button id="btn-entrar-sitio" class="btn-firmar">Entrar al Porfolio</button>
+      </div>
+    </div>
+  </div>
+  <script src="porfolio.js"></script>
+</body>
+
+</html>

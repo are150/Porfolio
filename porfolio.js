@@ -59,29 +59,29 @@ function casos() {
             document.getElementById('espiral-contenedor').style.transform = '';
             break;
         case 1:
-            /* Navegador */
-            /* Navegador Portada*/
+            /* Naegador */
+            /* Naegador Portada*/
             document.getElementById('portada').style.zIndex = '0';
             document.getElementById('portada').style.left = '9em';
-            /* Naevgador indice*/
+            /* Naegador indice*/
             document.getElementById('marcadorpresentacion').style.zIndex = '2';
             document.getElementById('marcadorpresentacion').style.display = 'flex';
             document.getElementById('marcadorpresentacion').style.left = '58em';
             document.getElementById('marcadorpresentacion').style.transition = 'none';
             document.getElementById('marcadorpresentacion').style.transformOrigin = "";
-            /* Navegador proyectos*/
+            /* Naegador proyectos*/
             document.getElementById('marcadorproyectos').style.display = 'flex';
             document.getElementById('marcadorproyectos').style.zIndex = '0';
             document.getElementById('marcadorproyectos').style.left = '29em';
             document.getElementById('marcadorproyectos').style.transition = '';
             document.getElementById('marcadorproyectos').style.transformOrigin = "";
-            /* Navegador proyecto1*/
+            /* Naegador proyecto1*/
             document.getElementById('marcadorproyecto1').style.display = 'flex';
             document.getElementById('marcadorproyecto1').style.zIndex = '0';
             document.getElementById('marcadorproyecto1').style.left = '29em';
             document.getElementById('marcadorproyecto1').style.transition = '';
             document.getElementById('marcadorproyecto1').style.transformOrigin = '';
-            /* Navegador proyecto2*/
+            /* Naegador proyecto2*/
             document.getElementById('marcadorproyecto2').style.display = 'flex';
             document.getElementById('marcadorproyecto2').style.zIndex = '0';
             document.getElementById('marcadorproyecto2').style.left = '29em';
@@ -109,21 +109,21 @@ function casos() {
             document.getElementById('espiral-contenedor').style.transform = '';
             break;
         case 2:
-            /* Navegador */
-            /* Navegador Portada*/
+            /* Naegador */
+            /* Naegador Portada*/
             document.getElementById('portada').style.zIndex = '0';
             document.getElementById('portada').style.left = '9em';
-            /* Navegador indice*/
+            /* Naegador indice*/
             document.getElementById('marcadorpresentacion').style.display = 'none';
-            /* Navegador proyectos*/
+            /* Naegador proyectos*/
             document.getElementById('marcadorproyectos').style.display = 'none';
-            /* Navegador proyecto1*/
+            /* Naegador proyecto1*/
             document.getElementById('marcadorproyecto1').style.display = 'flex';
             document.getElementById('marcadorproyecto1').style.zIndex = '2';
             document.getElementById('marcadorproyecto1').style.left = '';
             document.getElementById('marcadorproyecto1').style.transition = 'none';
             document.getElementById('marcadorproyecto1').style.transformOrigin = '';
-            /* Navegador proyecto2*/
+            /* Naegador proyecto2*/
             document.getElementById('marcadorproyecto2').style.display = 'flex';
             document.getElementById('marcadorproyecto2').style.zIndex = '0';
             document.getElementById('marcadorproyecto2').style.left = '';
@@ -150,17 +150,17 @@ function casos() {
             document.getElementById('espiral-contenedor').style.transform = '';
             break;
         case 3:
-            /* Navegador */
-            /* Navegador Portada*/
+            /* Naegador */
+            /* Naegador Portada*/
             document.getElementById('portada').style.zIndex = '0';
             document.getElementById('portada').style.left = '';
-            /* Navegador indice*/
+            /* Naegador indice*/
             document.getElementById('marcadorpresentacion').style.display = 'none';
-            /* Navegador proyectos*/
+            /* Naegador proyectos*/
             document.getElementById('marcadorproyectos').style.display = 'none';
-            /* Navegador proyecto1*/
+            /* Naegador proyecto1*/
             document.getElementById('marcadorproyecto1').style.display = 'none';
-            /* Navegador proyecto2*/
+            /* Naegador proyecto2*/
             document.getElementById('marcadorproyecto2').style.display = 'flex';
             document.getElementById('marcadorproyecto2').style.zIndex = '2';
             document.getElementById('marcadorproyecto2').style.left = '';
@@ -188,20 +188,20 @@ function casos() {
             document.getElementById('espiral-contenedor').style.transform = '';
             break;
         case 4:
-            /* Navegador Portada*/
+            /* Naegador Portada*/
             document.getElementById('portada').style.zIndex = '2';
             document.getElementById('portada').style.left = '52em';
-            /* Navegador indice*/
+            /* Naegador indice*/
             document.getElementById('marcadorpresentacion').style.display = 'flex';
             document.getElementById('marcadorpresentacion').style.zIndex = '0';
             document.getElementById('marcadorpresentacion').style.left = '2em';
             document.getElementById('marcadorpresentacion').style.transformOrigin = "right";
-            /* Navegador proyectos*/
+            /* Naegador proyectos*/
             document.getElementById('marcadorproyectos').style.display = 'flex';
             document.getElementById('marcadorproyectos').style.zIndex = '0';
             document.getElementById('marcadorproyectos').style.left = '1em';
             document.getElementById('marcadorproyectos').style.transformOrigin = "right";
-            /* Navegador proyecto1*/
+            /* Naegador proyecto1*/
             document.getElementById('marcadorproyecto1').style.display = 'flex';
             document.getElementById('marcadorproyecto1').style.zIndex = '0';
             document.getElementById('marcadorproyecto1').style.left = '3em';
@@ -274,20 +274,25 @@ function saltarAPagina() {
 }
 function irAPagina(event, numeroPagina) {
     if (event) event.preventDefault();
+    // 1. Actualizamos la variable global 'pagina' que ya tienes definida
     pagina = numeroPagina;
 
+    // 2. Actualizamos el input del número de página (si lo tienes)
     if (document.getElementById('pagina')) {
         document.getElementById('pagina').value = pagina;
     }
 
+    // 3. Ejecutamos tu función maestra para que cambie los display, z-index, etc.
     casos();
 }
 function crearAnillas(idContenedor, cantidad = 15) {
     const contenedor = document.getElementById(idContenedor);
-    if (!contenedor) return;
+    if (!contenedor) return; // Seguridad por si el ID no existe
 
+    // Limpiamos contenido previo
     contenedor.innerHTML = '';
 
+    // Generamos las anillas
     for (let i = 0; i < cantidad; i++) {
         let div = document.createElement('div');
         div.className = 'anilla';
@@ -295,7 +300,7 @@ function crearAnillas(idContenedor, cantidad = 15) {
     }
 }
 
-// AL CARGAR LA PÁGINA
+// AL CARGAR LA PÁGINA: Ejecutamos para todos los libros
 window.onload = function () {
     crearAnillas('espiral-contenedor');  // Libro 1
     crearAnillas('espiral-contenedor2'); // Libro 2
@@ -315,18 +320,26 @@ document.addEventListener('DOMContentLoaded', function () { //DOmContentLoaded s
 const navMarcadores = document.querySelectorAll('.marcapaginas .marcador');
 
 navMarcadores.forEach(marcador => {
+    // 2. Añade un escuchador de clic a cada marcador
     marcador.addEventListener('click', function (e) {
+
+        // 3. ¡LA CLAVE! Detener el comportamiento por defecto del navegador.
+        // Si no haces esto, el navegador intentaría saltar a la ancla #Presentacion, etc.
         e.preventDefault();
 
+        // 4. Lee el número de la página (el índice) desde el atributo data-index del HTML.
+        // Ejemplo: lee '0', '1', '2', '3', o '4'.
         const indiceDestino = parseInt(this.getAttribute('data-index'));
 
+        // 5. Validación y Lógica de Navegación
+        // Si el índice es válido y es diferente a la página actual...
         if (!isNaN(indiceDestino) && indiceDestino >= 0 && indiceDestino <= totalPaginas) {
             if (pagina !== indiceDestino) {
 
-
+                // 6. Relaciona el clic con tu sistema: Actualiza la variable global
                 pagina = indiceDestino;
 
-
+                // 7. Ejecuta tus funciones de actualización de vista
                 actualizarTexto(); // Sincroniza el número del input
                 casos();           // Muestra el contenido de la nueva página
             }
@@ -347,8 +360,10 @@ const appSudoku = document.getElementById('sudoku-app');
 
 botonesCierre.forEach(boton => {
     boton.addEventListener('click', function () {
+        // 1. Ocultar el modal principal
         modalProyectos.style.display = 'none';
 
+        // 2. Ocultar el Sudoku (por si se quedó abierto)
         if (appSudoku) {
             appSudoku.style.display = 'none';
         }
@@ -554,37 +569,34 @@ document.getElementById('btn-close-sudoku').addEventListener('click', () => {
 
 document.getElementById('sudoku-level').addEventListener('change', generarNuevoSudoku);
 
-//Formulario 
+// Formulario 
+const formulario = document.getElementById('contacto-biblioteca');
+const btnNuevoRegistro = document.getElementById('nuevo-registro');
 
-const formContacto = document.getElementById('contacto-biblioteca');
-const btnSellar = document.querySelector('.btn-sellar');
-const btnOtro = document.getElementById('nuevo-registro');
+if (formulario) {
+    formulario.addEventListener('submit', async function (event) {
+        event.preventDefault(); // Evita que la página se recargue
 
-formContacto.addEventListener('submit', (e) => {
+        const formData = new FormData(this);
 
-    // Cambiamos el botón a modo "Sello de Tinta"
-    btnSellar.innerText = "Enviado";
-    btnSellar.style.color = "#d9534f"; // Rojo sello
-    btnSellar.style.borderColor = "#d9534f";
-    btnSellar.style.transform = "rotate(-3deg) scale(1.1)";
-    btnSellar.disabled = true;
+        // Enviar los datos a Formspree
+        const response = await fetch(this.action, {
+            method: this.method,
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
 
-    // Mostramos la opción de anotar otro
-    btnOtro.style.display = "block";
-});
+        if (response.ok) {
+            alert('¡Registro enviado con éxito!');
+            formulario.reset(); // Limpia los campos
+        } else {
+            alert('Hubo un error al enviar. Por favor, inténtelo de nuevo.');
+        }
+    });
+}
 
-btnOtro.addEventListener('click', () => {
-    formContacto.reset();
-
-    // Restauramos el botón original
-    btnSellar.innerText = "Enviar";
-    btnSellar.style.color = "#8C5A3C";
-    btnSellar.style.borderColor = "#8C5A3C";
-    btnSellar.style.transform = "rotate(0deg) scale(1)";
-    btnSellar.disabled = false;
-
-    btnOtro.style.display = "none";
-});
 
 /* mostrar libros proyectos */
 
@@ -645,16 +657,20 @@ let paginaL3 = 0;
 
 function cambiarPaginaLibro3(event, n) {
     paginaL3 = n;
+    // Si el evento existe, evitamos que el enlace (href) haga algo
     if (event) event.preventDefault();
 
+    // 1. Lista de todos los elementos del Libro 3
     const portada3 = document.getElementById('portadapagina3');
     const indice3 = document.getElementById('folio3-indice');
     const detalle3 = document.getElementById('folio3-detalle');
 
+    // 2. Ocultamos todos primero para resetear la vista
     if (portada3) portada3.style.display = 'none';
     if (indice3) indice3.style.display = 'none';
     if (detalle3) detalle3.style.display = 'none';
 
+    // 3. Mostramos solo el que corresponde según el caso
     switch (paginaL3) {
         case 0: // Portada
             if (portada3) portada3.style.display = 'flex';
@@ -673,17 +689,32 @@ function cambiarPaginaLibro3(event, n) {
 /* cambiarPaginaLibro2(0, 2) */
 /* cambiarPaginaLibro3(0, 1) */
 
-/* --- Lógica del Modal de Bienvenida --- */
-const modalBienvenida = document.getElementById('modal-bienvenida');
-const btnEntrarSitio = document.getElementById('btn-entrar-sitio');
+// Esperar a que el DOM esté cargado
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('modal-bienvenida');
+    const btnEntrar = document.getElementById('btn-entrar-sitio');
 
-// Comprobamos si ya existe la sesión
-if (!sessionStorage.getItem('bienvenidaVisto')) {
-    // Si NO existe (es la primera vez o recargó la página tras cerrar navegador), mostramos
-    modalBienvenida.style.display = 'flex';
-}
+    // Al pulsar el botón, ocultamos el modal
+    if (btnEntrar && modal) {
+        btnEntrar.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
+});
 
-btnEntrarSitio.addEventListener('click', function () {
-    modalBienvenida.style.display = 'none';
-    sessionStorage.setItem('bienvenidaVisto', 'true');
+//Revision de href
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Seleccionamos los tres elementos por su nueva clase
+    const enlacesInactivos = document.querySelectorAll('.enlace-inactivo');
+
+    enlacesInactivos.forEach(enlace => {
+        enlace.addEventListener('click', (event) => {
+            // Evitamos cualquier acción por defecto del enlace
+            event.preventDefault();
+
+            // Mostramos el mensaje de alerta
+            alert('Servicios no disponibles actualmente');
+        });
+    });
 });
